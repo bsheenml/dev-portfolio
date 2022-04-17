@@ -1,10 +1,10 @@
 import emoji from "react-easy-emoji";
 
 export const greetings = {
-	name: "Hanzla Tauqeer",
-	title: "Hi all, I'm Hanzla",
+	name: "Brendan Sheen",
+	title: "Brendan Sheen",
 	description:
-		"A passionate Full Stack Web Developer and Mobile App Developer having an experience of building Web applications with JavaScript / Reactjs / Nodejs / Python / Django / Flask and some other cool libraries and frameworks and Cross Platform Mobile Apps With Flutter.",
+		"Hi! My name is Brendan and I'm passionate about technology. This site is dedicated to helping humans explore technology, build cool things, and offer advice on working in the industry. ",
 	resumeLink: "https://cv.hanzla.ga",
 };
 

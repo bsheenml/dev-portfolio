@@ -14,6 +14,17 @@ const GithubProfileCard = dynamic(() =>
 import { openSource } from "../portfolio";
 import SEO from "../components/SEO";
 
+export async function getStaticProps() {
+	const homes = await fetch(
+		`https://api.hubapi.com/crm/v3/objects/homes?hapikey=${API_KEY}`)
+	.then((res) => res.json());
+
+	return {
+		props: { homes },
+	};
+	console.log(homes)
+}
+
 export default function Home({ githubProfileData }) {
 	return (
 		<div>
@@ -66,12 +77,4 @@ Home.prototype = {
 	githubProfileData: PropTypes.object.isRequired,
 };
 
-export async function getStaticProps(_) {
-	const githubProfileData = await fetch(
-		`https://api.github.com/users/${openSource.githubUserName}`
-	).then((res) => res.json());
 
-	return {
-		props: { githubProfileData },
-	};
-}
